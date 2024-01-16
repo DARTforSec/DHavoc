@@ -1,6 +1,11 @@
 Teamserver {
 	Host = "0.0.0.0"
-	Port = 40056
+	Port = 54154
+	Build {
+		Compiler64 = "/bin/gcc -m64"
+		Compiler86 = "/bin/gcc -m32"
+		Nasm 	   = "/usr/bin/nasm"
+	}
 }
 
 Operators {
@@ -17,8 +22,8 @@ Demon {
     Sleep = 2
 
     Injection {
-        Spawn64 = "C:\\Windows\\System32\\notepad.exe"
-        Spawn32 = "C:\\Windows\\SysWOW64\\notepad.exe"
+        Spawn64 = "/bin/gnome-text-editor"
+        Spawn32 = "/bin/gnome-text-editor"
     }
 }
 
